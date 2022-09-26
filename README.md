@@ -1,6 +1,6 @@
 # Financial Modeling Prep SDK for Crystal Example
 
-Example app using the Financial Modeling Prep SDK for Crystal.
+Example app using the Financial Modeling Prep SDK for Crystal created using [OpenAPI Generator](https://github.com/OpenAPITools/openapi-generator).
 
 ## Usage
 
