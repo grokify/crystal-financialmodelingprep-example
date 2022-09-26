@@ -10,6 +10,9 @@ infos, status, headers = api.get_income_statements_with_http_info(
   period: "annual")
 
 puts status
-puts infos
+
+infos.each { |info|
+  puts info.to_json
+}
 
 # https://financialmodelingprep.com/api/v3/income-statement/AAPL?limit=120&apikey=KEY&period=annual

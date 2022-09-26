@@ -4,4 +4,4 @@ version: 0.1.0
 dependencies:
   financialmodelingprep:
     github: grokify/crystal-financialmodelingprep
-    version: ~> 0.1.4
+    version: ~> 0.1.5
