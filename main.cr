@@ -1,18 +1,24 @@
 require "financialmodelingprep"
 
-api = Financialmodelingprep::FinancialStatementsApi.new
+fmp_api_key = ENV.has_key?("FMP_API_KEY") ? ENV["FMP_API_KEY"] || "" : ""
 
-infos, status, headers = api.get_income_statements_with_http_info(
-  symbol: "AAPL",
-  apikey: ENV["FMP_API_KEY"] || "",
-  datatype: "json",
-  limit: 1,
-  period: "annual")
+if fmp_api_key.size < 1
+  puts "api key env variable `FMP_API_KEY` is required"
+else
+  api = Financialmodelingprep::FinancialStatementsApi.new
 
-puts status
+  infos, status, headers = api.get_income_statements_with_http_info(
+    symbol: "AAPL",
+    apikey: fmp_api_key,
+    datatype: "json",
+    limit: 1,
+    period: "annual")
 
-infos.each { |info|
-  puts info.to_json
-}
+  puts status
 
-# https://financialmodelingprep.com/api/v3/income-statement/AAPL?limit=120&apikey=KEY&period=annual
+  infos.each { |info|
+    puts info.to_json
+  }
+
+  # https://financialmodelingprep.com/api/v3/income-statement/AAPL?limit=120&apikey=KEY&period=annual
+end
