@@ -1,7 +1,8 @@
 name: fmpexample
-version: 0.1.0
+version: 0.1.1
 
 dependencies:
   financialmodelingprep:
     github: grokify/crystal-financialmodelingprep
     version: ~> 0.1.5
+    # path: ../crystal-financialmodelingprep # use in place of `github` and `version`
