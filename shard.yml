@@ -5,4 +5,4 @@ dependencies:
   financialmodelingprep:
     github: grokify/crystal-financialmodelingprep
     version: ~> 0.1.5
-    # path: ../crystal-financialmodelingprep # use in place of `github` and `version`
+    # path: ../crystal-financialmodelingprep # use in place of `github` and `version` per https://github.com/crystal-lang/shards/issues/105
