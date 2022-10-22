@@ -6,7 +6,7 @@ shards:
 
   financialmodelingprep:
     git: https://github.com/grokify/crystal-financialmodelingprep.git
-    version: 0.1.5
+    version: 0.2.0
 
   http-client-digest_auth:
     git: https://github.com/mamantoha/http-client-digest_auth.git

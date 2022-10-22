@@ -5,11 +5,18 @@ fmp_api_key = ENV.has_key?("FMP_API_KEY") ? ENV["FMP_API_KEY"] || "" : ""
 if fmp_api_key.size < 1
   puts "api key env variable `FMP_API_KEY` is required"
 else
-  api = Financialmodelingprep::FinancialStatementsApi.new
+  cfg = Financialmodelingprep::Configuration.new do |config|
+    config.api_key = {
+      :apikey => fmp_api_key,
+    }
+  end
+
+  client = Financialmodelingprep::ApiClient.new cfg
+
+  api = Financialmodelingprep::FinancialStatementsApi.new client
 
   infos, status, headers = api.get_income_statements_with_http_info(
     symbol: "AAPL",
-    apikey: fmp_api_key,
     datatype: "json",
     limit: 1,
     period: "annual")

@@ -1,8 +1,8 @@
 name: fmpexample
-version: 0.1.1
+version: 0.2.0
 
 dependencies:
   financialmodelingprep:
     github: grokify/crystal-financialmodelingprep
-    version: ~> 0.1.5
+    version: ~> 0.2.0
     # path: ../crystal-financialmodelingprep # use in place of `github` and `version` per https://github.com/crystal-lang/shards/issues/105
